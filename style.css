@@ -1,0 +1,76 @@
+body {
+    background: rgb(94, 38, 151);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100vh;
+}
+
+
+a {
+    color:#fff;
+    font-size:20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    text-decoration: none;
+    margin:18px 0 0;
+    text-align: center;
+
+}
+
+.action, .content {
+    position: absolute;
+    top: 50%;
+    left:35%;
+    transform:translate(-50%, -50%);
+    width:140px;
+    height:70px;
+}
+
+
+.action-1, .content-1 {
+position: absolute;
+top:50%;
+left:65%;
+transform:translate(-50%, -50%);
+width:140px;
+height:70px;
+
+}
+
+.action, .action-1 {
+    background:transparent;
+    transform-origin: 0% 0%;
+}
+
+
+.action.active, .action-1.active {
+    font-size: 30px;
+    text-align: center;
+    border-width: 5px;
+    border-style: dashed;
+    color:rgb(72, 226, 139);
+    border-radius: 50%;
+    animation:pulsate 0.75s ease-out infinite;
+    cursor: pointer;
+
+}
+
+.action-1.active {
+    border-radius: 0%;
+}
+
+@keyframes pulsate {
+    0% {
+        transform:scale(1) translate(-50%, -50%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    } 
+    100% {
+       transform:scale(1) translate(-50%, -50%);
+       opacity: 0;
+    }
+}
